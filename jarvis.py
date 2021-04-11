@@ -32,13 +32,17 @@ def speak(audio):
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour <12:
-        speak("Good Morning How can i help you" )
+        speak("Good Morning" )
         
     elif hour>=12 and hour<18:
-        speak("Good Afternoon How can i help you")
+        speak("Good Afternoon")
         
-    else:
-        speak("Good Evening How can i help you")
+    elif:
+        speak("Good Evening")
+        
+    speak("How can i help you")
+        
+    
 
 def takeCommand():
     #it takes microphone i/p input and returns string o/p
@@ -70,7 +74,7 @@ def sendEmail(to,content):
     server.close
         
 if __name__ == "__main__":
-    speak("hello kamlesh")
+    speak("hello sir")
     wishMe()
     while True: #putted it into comment because repeatedly listening
     #if 1:
@@ -99,10 +103,10 @@ if __name__ == "__main__":
         elif 'play music' in query:
             #music_dir = '/home/dell/Downloads/Songs'
             #songs = os.listdir(music_dir)
-            #mp3File=input('/home/dell/Downloads/Songs/Haan Main Galat - Love Aaj KalKartik, SaraPritamArijit SinghShashwat.mp3')
+            #mp3File=input('/home/dell/Downloads/Songs/songname.mp3')
             #print(songs) 
             #using playsound() because os.startfile not supporting
-            playsound('/home/dell/Downloads/Songs/Haan Main Galat - Love Aaj KalKartik, SaraPritamArijit SinghShashwat.mp3')
+            playsound('/home/dell/Downloads/Songs/songname.mp3')
             #os.startfile(os.path.join(music_dir,songs[0])) #use random module to play random songs
         
         elif 'the time' in query:
