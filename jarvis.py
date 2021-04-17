@@ -1,4 +1,4 @@
-#AI speech Assistant can do following functionality build on ubuntu 20.04
+#AI speech Assistant can do following functionality build on ubuntu 20.10
 #play music or video
 #tell weather or time
 #open any website or software
