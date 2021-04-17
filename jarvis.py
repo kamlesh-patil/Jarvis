@@ -111,7 +111,7 @@ if __name__ == "__main__":
          #   webbrowser.open("gmail.com" 
             
         elif 'play music' in query:
-            playsound.playsound('/home/dell/Downloads/Songs/Haan Main Galat - Love Aaj KalKartik, SaraPritamArijit SinghShashwat.mp3')
+            playsound.playsound('/home/dell/Downloads/Songs/songname.mp3')
             
         elif 'play video' in query:
             vid_path="/home/dell/PythonPrograms/Extra/video.mp4"
@@ -140,8 +140,8 @@ if __name__ == "__main__":
             cv2.destroyAllWindows()  # Destroy all the windows
             
         elif 'time' in query:
-                strTime = datetime.datetime.now().strftime("%H:%M")
-                speak(f"Sir, the time is {strTime}")
+            strTime = datetime.datetime.now().strftime("%H:%M")
+            speak(f"Sir, the time is {strTime}")
                 
         elif 'set alarm' in query:
             speak("What time you want to set alarm")
@@ -167,7 +167,7 @@ if __name__ == "__main__":
                 speak("Sorry i can't send email")
                 
         elif 'weather' in query:
-            owm = pyowm.OWM('765d13e14fac7f6abeef39eed9e0430d') #API key got from OpenWeatherMap website and imported pyown module
+            owm = pyowm.OWM('Enter your key here') #API key which you can get from OpenWeatherMap website and imported pyown module
             mgr = owm.weather_manager()
             observation = mgr.weather_at_place("surat,in")
             w = observation.weather
@@ -230,7 +230,7 @@ if __name__ == "__main__":
                 result=1
                 while(1):
                         p = inflect.engine()
-                        speak("give me"+p.ordinal(i)+'number') #not speaking properly like first second third...
+                        speak("give me"+p.ordinal(i)+'number') #not speaking properly like first second third...instea it is speaking 1st as '1 s t', 2nd as '2 n d'... 
                         a=str(a)
                         a=takeCommand().lower()
                         if('done' == a ):
