@@ -73,7 +73,25 @@ def sendEmail(to,content):
     server.login('Youremail','password') #sender email and password also less secure apps is required to enable
     server.sendmail('Receivers mail',to,content)
     server.close
+    
+#we have written this three fucntions here because we are calling it from switch dictionary
 
+#def openWikipedia(): 
+#    speak('Searching Wikipedia wait for a moment...')
+#    query = query.replace("wikipedia","")
+#    results = wikipedia.summary(query,sentences=1)
+#    speak("According to wikipedia")
+#    print(results)
+#    speak(results) 
+    
+#def openWebsite():
+#    speak('Which website you want to open')
+#    query = takeCommand().lower()
+#    webbrowser.open(query+".com")    
+
+#def playMusic():
+#    playsound.playsound('/home/dell/Downloads/Songs/Haan Main Galat - Love Aaj KalKartik, SaraPritamArijit SinghShashwat.mp3')        
+        
 
 if __name__ == "__main__":
     username='kamlesh'
@@ -82,6 +100,20 @@ if __name__ == "__main__":
     #while True: #putted it into comment because repeatedly listening
     if 1:
         query = takeCommand().lower() #just because there should not mismatch b/w capital and small   
+        
+        #update 28-4-2021 9:42 if-else blocks can be transferred to switch-case blocks using dictionary mapping
+        #Python don't have inbuilt support for switch but we can implement it using dictionary mapping
+        #we are using switch cases here rather than if-else ladder...Because when no. of case are more then switch works faster than if-else
+        #also we don't have complex conditions here otherwise we would have gone for if-else ladder
+        
+        #but by using switch many functions are not working that's why currently we are using if-else ladder only once problem detected we will transfer from if-else to switch
+        #also order is important like first defination of fucntion then dictionary then passing key to dictionary because python goes from top-down fashion
+        #switch = {
+        #        'open website':openWebsite,
+        #        'wikipedia':openWikipedia,
+        #        'play music':playMusic
+        #        }
+        #switch.get(query) #from here we are passing key for switch dictionary...  
         
         if 'wikipedia' in query:   
             speak('Searching Wikipedia wait for a moment...')
